@@ -27,7 +27,7 @@ jobs:
           name: jar
           path: target/*.jar
   release:
-    if: github.event_name == 'tags'
+    if: github.event_name == 'release'
     needs: build
     name: Create Release
     runs-on: ubuntu-latest
